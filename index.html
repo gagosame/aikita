@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIKita - AI Bahasa Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">AIKita 🤖</div>
+    <p>Alat AI Bahasa Indonesia yang mudah digunakan</p>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1>Buat Deskripsi Produk dengan AI</h1>
+      <p>
+        Masukkan informasi produk kamu dan biarkan AI membantu
+        membuat deskripsi yang menarik.
+      </p>
+    </section>
+
+    <section class="card">
+
+      <label>Nama Produk</label>
+      <input
+        id="productName"
+        type="text"
+        placeholder="Contoh: Sepatu Sneakers Pria"
+      >
+
+      <label>Keunggulan Produk</label>
+      <textarea
+        id="productInfo"
+        placeholder="Contoh: ringan, nyaman, cocok untuk sehari-hari"
+      ></textarea>
+
+      <label>Gaya Tulisan</label>
+      <select id="style">
+        <option value="Profesional">Profesional</option>
+        <option value="Santai">Santai</option>
+        <option value="Menjual">Menjual</option>
+        <option value="Singkat">Singkat</option>
+      </select>
+
+      <button onclick="generateDescription()">
+        ✨ Buat Deskripsi
+      </button>
+
+      <div id="resultBox">
+        <h3>Hasil AI</h3>
+        <div id="result">
+          Hasil deskripsi akan muncul di sini.
+        </div>
+
+        <button id="copyButton" onclick="copyResult()">
+          📋 Salin
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 AIKita</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
