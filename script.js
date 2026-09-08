@@ -61,19 +61,15 @@ async function generateDescription() {
     result.textContent = data.result;
 
   } catch (error) {
+  console.error(error);
 
-    console.error(error);
-
-    result.innerHTML = `
-      <div class="empty-result">
-        <div class="empty-icon">😕</div>
-        <h3>Maaf, terjadi masalah</h3>
-        <p>
-          AIKita tidak dapat membuat deskripsi saat ini.
-          Silakan coba lagi.
-        </p>
-      </div>
-    `;
+  result.innerHTML = `
+    <div class="empty-result">
+      <div class="empty-icon">⚠️</div>
+      <h3>Terjadi masalah</h3>
+      <p>${error.message || "Tidak diketahui"}</p>
+    </div>
+  `;
 
   } finally {
 
