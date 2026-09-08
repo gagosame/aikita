@@ -8,7 +8,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 10000;
 
 const client = new OpenAI({
-  apiKey: process.env.GEMINI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 app.get("/", (req, res) => {
