@@ -2,7 +2,6 @@ async function generateDescription() {
   const productName = document.getElementById("productName").value.trim();
   const productInfo = document.getElementById("productInfo").value.trim();
   const style = document.getElementById("style").value;
-
   const result = document.getElementById("result");
 
   if (!productName || !productInfo) {
@@ -10,46 +9,37 @@ async function generateDescription() {
     return;
   }
 
-  result.textContent = "⏳ Sedang membuat deskripsi...";
+  result.textContent = "⏳ AI sedang membuat deskripsi...";
 
-  // Untuk sementara kita gunakan simulasi AI.
-  // API AI akan kita pasang setelah website online.
+  try {
+    const response = await fetch(
+      "https://aikita-api.gagosame.workers.dev",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          productName: productName,
+          productInfo: productInfo,
+          style: style
+        })
+      }
+    );
 
-  setTimeout(() => {
-    let description = "";
+    const data = await response.json();
 
-    if (style === "Profesional") {
-      description =
-        `${productName}\n\n` +
-        `${productName} hadir dengan berbagai keunggulan yang cocok ` +
-        `untuk kebutuhan sehari-hari.\n\n` +
-        `Keunggulan: ${productInfo}\n\n` +
-        `Pilihan tepat bagi kamu yang mengutamakan kualitas dan kenyamanan.`;
+    if (!response.ok) {
+      throw new Error(data.error || "Gagal membuat deskripsi.");
     }
 
-    else if (style === "Santai") {
-      description =
-        `Lagi cari ${productName} yang keren dan nyaman? 😍\n\n` +
-        `Produk ini punya keunggulan: ${productInfo}.\n\n` +
-        `Cocok banget buat kamu yang ingin tampil nyaman setiap hari!`;
-    }
+    result.textContent = data.result;
 
-    else if (style === "Menjual") {
-      description =
-        `🔥 ${productName} — Pilihan Tepat Untuk Kamu!\n\n` +
-        `Nikmati berbagai keunggulan: ${productInfo}.\n\n` +
-        `Jangan sampai ketinggalan. Yuk, dapatkan ${productName} sekarang!`;
-    }
-
-    else {
-      description =
-        `${productName}\n\n` +
-        `${productInfo}.\n\n` +
-        `Cocok untuk penggunaan sehari-hari.`;
-    }
-
-    result.textContent = description;
-  }, 800);
+  } catch (error) {
+    console.error(error);
+    result.textContent =
+      "❌ Gagal menghubungi AI. Silakan coba lagi.";
+  }
 }
 
 
@@ -63,4 +53,4 @@ function copyResult() {
     .catch(() => {
       alert("Gagal menyalin teks.");
     });
-        }
+                      }
