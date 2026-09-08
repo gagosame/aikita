@@ -638,3 +638,95 @@ select:focus {
   width: 50px;
   height: 50px;
  
+/* MOBILE POLISH */
+
+@media (max-width: 480px) {
+
+  .nav-container {
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .nav-button {
+    white-space: nowrap;
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 48px 16px 55px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-content > p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 48px;
+    width: 100%;
+    border-radius: 11px;
+  }
+
+  .hero-note {
+    font-size: 11px;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+
+  .mini-window {
+    width: 100%;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .generator-section,
+  .features-section,
+  .tools-section,
+  .about-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .generator-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .generator-header h3 {
+    font-size: 18px;
+  }
+
+  .result {
+    padding: 17px;
+    font-size: 13px;
+  }
+
+  .tool-card {
+    padding: 17px;
+  }
+
+  .cta-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .cta-card {
+    border-radius: 20px;
+    padding: 45px 18px;
+  }
+      }
