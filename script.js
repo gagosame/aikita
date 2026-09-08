@@ -31,7 +31,7 @@ async function generateDescription() {
 
   try {
     const response = await fetch(
-      "https://aikita-api.gagosame.workers.dev",
+      "https://aikita-api1.gagosame.workers.dev",
       {
         method: "POST",
         headers: {
