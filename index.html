@@ -3,74 +3,375 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIKita - AI Bahasa Indonesia</title>
+
+  <title>AIKita — AI untuk Bisnis Indonesia</title>
+  <meta
+    name="description"
+    content="AIKita membantu membuat deskripsi produk, caption, iklan, dan konten bisnis dengan AI."
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">AIKita 🤖</div>
-    <p>Alat AI Bahasa Indonesia yang mudah digunakan</p>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#" class="brand">
+        <span class="brand-icon">✦</span>
+        <span>AIKita</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#beranda">Beranda</a>
+        <a href="#tools">Tools</a>
+        <a href="#premium">Premium</a>
+      </nav>
+
+      <button class="login-btn">Masuk</button>
+
+    </div>
   </header>
 
-  <main>
+
+  <!-- HERO -->
+  <main id="beranda">
 
     <section class="hero">
-      <h1>Buat Deskripsi Produk dengan AI</h1>
-      <p>
-        Masukkan informasi produk kamu dan biarkan AI membantu
-        membuat deskripsi yang menarik.
-      </p>
-    </section>
+      <div class="container hero-grid">
 
-    <section class="card">
+        <div class="hero-content">
 
-      <label>Nama Produk</label>
-      <input
-        id="productName"
-        type="text"
-        placeholder="Contoh: Sepatu Sneakers Pria"
-      >
+          <div class="badge">
+            ✨ AI untuk semua
+          </div>
 
-      <label>Keunggulan Produk</label>
-      <textarea
-        id="productInfo"
-        placeholder="Contoh: ringan, nyaman, cocok untuk sehari-hari"
-      ></textarea>
+          <h1>
+            Bikin pekerjaan lebih mudah
+            <span>dengan AI.</span>
+          </h1>
 
-      <label>Gaya Tulisan</label>
-      <select id="style">
-        <option value="Profesional">Profesional</option>
-        <option value="Santai">Santai</option>
-        <option value="Menjual">Menjual</option>
-        <option value="Singkat">Singkat</option>
-      </select>
+          <p>
+            AIKita membantu kamu membuat konten bisnis,
+            deskripsi produk, caption, dan berbagai kebutuhan
+            lainnya dengan cepat.
+          </p>
 
-      <button onclick="generateDescription()">
-        ✨ Buat Deskripsi
-      </button>
+          <div class="hero-buttons">
+            <a href="#generator" class="primary-btn">
+              ✨ Coba Gratis
+            </a>
 
-      <div id="resultBox">
-        <h3>Hasil AI</h3>
-        <div id="result">
-          Hasil deskripsi akan muncul di sini.
+            <a href="#tools" class="secondary-btn">
+              Lihat Tools
+            </a>
+          </div>
+
+          <div class="trust">
+            <span>✓ Gratis untuk mencoba</span>
+            <span>✓ Bahasa Indonesia</span>
+            <span>✓ Bisa dari HP</span>
+          </div>
+
         </div>
 
-        <button id="copyButton" onclick="copyResult()">
-          📋 Salin
-        </button>
+        <div class="hero-card">
+
+          <div class="mini-window">
+
+            <div class="window-top">
+              <span>●</span>
+              <span>AIKita AI</span>
+            </div>
+
+            <div class="ai-message">
+              <div class="ai-avatar">✦</div>
+
+              <div>
+                <strong>Halo! 👋</strong>
+                <p>
+                  Apa yang ingin kamu buat hari ini?
+                </p>
+              </div>
+            </div>
+
+            <div class="suggestions">
+              <span>🛍️ Deskripsi produk</span>
+              <span>📱 Caption</span>
+              <span>📢 Iklan</span>
+              <span>✉️ Email</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+      <div class="container features-grid">
+
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Cepat</h3>
+          <p>Dapatkan hasil dalam hitungan detik.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">✨</div>
+          <h3>Mudah</h3>
+          <p>Tidak perlu menjadi ahli AI.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🇮🇩</div>
+          <h3>Bahasa Indonesia</h3>
+          <p>Dibuat untuk kebutuhan pengguna Indonesia.</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>Mobile Friendly</h3>
+          <p>Nyaman digunakan dari HP maupun laptop.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GENERATOR -->
+    <section id="generator" class="generator-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="badge">🛍️ AI Product Description</div>
+
+          <h2>
+            Buat deskripsi produk
+            <span>dengan AI</span>
+          </h2>
+
+          <p>
+            Masukkan informasi produk kamu.
+            AIKita akan membuat deskripsi yang siap digunakan.
+          </p>
+        </div>
+
+
+        <div class="generator-card">
+
+          <div class="form-area">
+
+            <label for="productName">
+              Nama Produk
+            </label>
+
+            <input
+              id="productName"
+              type="text"
+              placeholder="Contoh: Sepatu Sneakers Pria"
+            >
+
+
+            <label for="productInfo">
+              Keunggulan Produk
+            </label>
+
+            <textarea
+              id="productInfo"
+              placeholder="Contoh: ringan, nyaman, cocok untuk sehari-hari"
+            ></textarea>
+
+
+            <label for="style">
+              Gaya Tulisan
+            </label>
+
+            <select id="style">
+              <option value="Profesional">Profesional</option>
+              <option value="Santai">Santai</option>
+              <option value="Menjual">Menjual</option>
+              <option value="Singkat">Singkat</option>
+            </select>
+
+
+            <button
+              class="generate-btn"
+              onclick="generateDescription()"
+            >
+              ✨ Buat Deskripsi dengan AI
+            </button>
+
+          </div>
+
+
+          <div class="result-area">
+
+            <div class="result-header">
+              <h3>Hasil AI</h3>
+
+              <button
+                class="copy-btn"
+                onclick="copyResult()"
+              >
+                📋 Salin
+              </button>
+            </div>
+
+            <div id="result" class="result-content">
+              <div class="empty-result">
+                <div class="empty-icon">✦</div>
+
+                <h3>Hasil akan muncul di sini</h3>
+
+                <p>
+                  Isi informasi produk lalu tekan
+                  tombol "Buat Deskripsi dengan AI".
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TOOLS -->
+    <section id="tools" class="tools-section">
+
+      <div class="container">
+
+        <div class="section-heading left">
+
+          <div class="badge">🚀 AI Tools</div>
+
+          <h2>
+            Satu platform,
+            <span>banyak kebutuhan.</span>
+          </h2>
+
+          <p>
+            Lebih banyak tools AI akan segera hadir di AIKita.
+          </p>
+
+        </div>
+
+
+        <div class="tools-grid">
+
+          <div class="tool-card active">
+            <div class="tool-icon">🛍️</div>
+            <h3>Deskripsi Produk</h3>
+            <p>
+              Buat deskripsi produk yang menarik
+              dan siap digunakan.
+            </p>
+            <span class="tool-status">Tersedia</span>
+          </div>
+
+
+          <div class="tool-card">
+            <div class="tool-icon">📱</div>
+            <h3>Caption Media Sosial</h3>
+            <p>
+              Buat caption untuk Instagram,
+              TikTok, dan lainnya.
+            </p>
+            <span class="tool-status coming">Segera hadir</span>
+          </div>
+
+
+          <div class="tool-card">
+            <div class="tool-icon">📢</div>
+            <h3>Teks Iklan</h3>
+            <p>
+              Buat teks iklan yang menarik perhatian.
+            </p>
+            <span class="tool-status coming">Segera hadir</span>
+          </div>
+
+
+          <div class="tool-card">
+            <div class="tool-icon">✉️</div>
+            <h3>Email Bisnis</h3>
+            <p>
+              Buat email profesional dengan mudah.
+            </p>
+            <span class="tool-status coming">Segera hadir</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PREMIUM -->
+    <section id="premium" class="premium-section">
+
+      <div class="container">
+
+        <div class="premium-card">
+
+          <div>
+            <div class="premium-badge">👑 AIKita Premium</div>
+
+            <h2>
+              Siap bekerja lebih cepat?
+            </h2>
+
+            <p>
+              Nikmati lebih banyak penggunaan dan
+              fitur AIKita saat versi Premium tersedia.
+            </p>
+          </div>
+
+          <button class="premium-btn">
+            Segera Hadir →
+          </button>
+
+        </div>
+
       </div>
 
     </section>
 
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 AIKita</p>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <strong>✦ AIKita</strong>
+        <span>AI untuk kebutuhan Indonesia.</span>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 AIKita. Semua hak dilindungi.
+      </div>
+
+    </div>
+
   </footer>
+
 
   <script src="script.js"></script>
 
 </body>
-</html>
+  </html>
